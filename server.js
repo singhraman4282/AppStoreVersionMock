@@ -20,7 +20,7 @@
 
 var express = require('express');
 var app = express(); 
-var PORT = 9999;
+var PORT = process.env.port || 9999;
   
 // app.get('/build', function (req, res) {
 //   res.send(req.path);
