@@ -29,6 +29,10 @@ var PORT = process.env.port || 9999;
 app.get('/build/:version', function(req, res) {
     res.send({results: [{version: req.params.version}]});    
 });
+
+app.get('/', function(req, res) {
+    res.send({error: 'Please provide a build number'});    
+});
   
 app.listen(PORT, function(err){
     if (err) console.log(err);
